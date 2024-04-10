@@ -34,6 +34,8 @@ class Report extends \yii\db\ActiveRecord
         return [
             [['time', 'user_id', 'order_id'], 'required'],
             [['time', 'user_id', 'rate', 'order_id'], 'integer'],
+            [['price'], 'number'],
+            [['help'], 'string', 'max' => 32],
             [['order_id'], 'exist', 'skipOnError' => true, 'targetClass' => Order::class, 'targetAttribute' => ['order_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -49,6 +51,8 @@ class Report extends \yii\db\ActiveRecord
             'time' => 'Время потраченное',
             'user_id' => 'Номер пользователя',
             'rate' => 'Оценка',
+            'help' => 'Оказанная помощь',
+            'price' => 'Цена за оказание услуги',
             'order_id' => 'Номер заявки',
         ];
     }

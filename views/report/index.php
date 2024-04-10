@@ -30,6 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'time',
             'user.fio',
             'rate',
+            'price',
+            'help',
+            'order.type_break',
             'order.id',
             [
                 'class' => ActionColumn::className(),

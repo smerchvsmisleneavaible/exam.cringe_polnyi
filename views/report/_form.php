@@ -24,12 +24,14 @@ use yii\widgets\ActiveForm;
     ) ?>
 
     <?= $form->field($model, 'rate')->dropDownList(([
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
+        '1' => '1',
+        '2' => '2',
+        '3' => '3',
+        '4' => '4',
+        '5' => '5',
     ])) ?>
+    <?= $form->field($model, 'price')->textInput() ?>
+    <?= $form->field($model, 'help')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
